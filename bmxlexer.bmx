@@ -212,6 +212,12 @@ Type TToken
 	Const TOK_LINE_COMMENT% = 128
 	Const TOK_BLOCK_COMMENT% = 129
 	Const TOK_EOF% = 130
+	Const TOK_TRUE_KW% = 131
+	Const TOK_FALSE_KW% = 132
+	Const TOK_TRY_KW% = 133
+	Const TOK_CATCH_KW% = 134
+	Const TOK_FINALLY_KW% = 135
+	Const TOK_ENDTRY_KW% = 136
 	
 	Const TOK_LAST%=TOK_EOF
 	Const TOK_COUNT%=TOK_LAST+1

@@ -200,6 +200,12 @@ static const char *token_strings[] = {
 	"Line Comment",
 	"Block Comment",
 	"<EOF>",
+	"True",
+	"False",
+	"Try",
+	"Catch",
+	"Finally",
+	"End Try",
 };
 
 
@@ -339,8 +345,17 @@ static token_single_t const token_singles[] = {
 	{ .kind = TOK_PIPE, .case_sensitive = false, .matches = "|"	 },
 	{ .kind = TOK_AMPERSAND, .case_sensitive = false, .matches = "&"  },
 	{ .kind = TOK_NEWLINE, .case_sensitive = false, .matches = "\n"	 },
-	
+
+	{ .kind = TOK_TRUE_KW, .case_sensitive = false, .matches = "true" },
+	{ .kind = TOK_FALSE_KW, .case_sensitive = false, .matches = "false" },
+
+	{ .kind = TOK_TRY_KW, .case_sensitive = false, .matches = "try" },
+	{ .kind = TOK_CATCH_KW, .case_sensitive = false, .matches = "catch" },
+	{ .kind = TOK_FINALLY_KW, .case_sensitive = false, .matches = "finally" },
+	{ .kind = TOK_ENDTRY_KW, .case_sensitive = false, .matches = "endtry" },
+
 	{ .kind = TOK_INVALID, .case_sensitive = false, .matches = NULL },
+
 };
 
 
@@ -362,6 +377,7 @@ static token_pair_t const token_pairs[] = {
 	{ .left = TOK_END_KW, .right = TOK_IF_KW, .kind = TOK_ENDIF_KW, .range = 1 },
 	{ .left = TOK_END_KW, .right = TOK_SELECT_KW, .kind = TOK_ENDSELECT_KW, .range = 1 },
 	{ .left = TOK_END_KW, .right = TOK_WHILE_KW, .kind = TOK_ENDWHILE_KW, .range = 1 },
+	{ .left = TOK_END_KW, .right = TOK_TRY_KW, .kind = TOK_ENDTRY_KW, .range = 1 },
 	
 #ifdef BMAX_USE_ADDITIONS
 	

@@ -198,6 +198,14 @@ typedef enum {
 	
 	TOK_EOF,
 	
+	TOK_TRUE_KW,
+	TOK_FALSE_KW,
+
+	TOK_TRY_KW,
+	TOK_CATCH_KW,
+	TOK_FINALLY_KW,
+	TOK_ENDTRY_KW,
+
 	TOK_LAST=TOK_EOF,
 	TOK_COUNT
 } token_kind_t;
